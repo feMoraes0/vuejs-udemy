@@ -1,16 +1,17 @@
 new Vue({
   el: "#desafio",
   data: {
-    name: "Fernando de Moraes",
-    age: 26,
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png"
+    valor: ""
   },
   methods: {
-    tripleAge: function () {
-      return this.age * 3;
+    showAlert() {
+      alert('Showing alert');
     },
-    getRandomNumber: function () {
-      return Math.random();
+    updateOnKeyDown(event) {
+      this.valor = event.target.value;
+    },
+    updateOnEnter(event) {
+      this.valor = event.target.value
     }
   }
 })
